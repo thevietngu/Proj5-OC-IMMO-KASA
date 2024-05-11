@@ -1,0 +1,64 @@
+
+@import '../../Styles/index.scss';
+
+.banner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 100%;
+	
+	border-radius: 25px;
+	font-family: Montserrat;
+	color: #FFF;
+	font-size: 48px;
+	font-weight: 400;
+	margin: 3rem 3rem;
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 5rem 2rem;
+		width: 100%;
+		height: 100%;
+		color: $white;
+		border-radius: 25px;
+		z-index: 2;
+	}
+
+	&__picture,
+	&__background {
+		border-radius: 25px;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__picture {
+		object-fit: cover;
+		
+	}
+
+	&__background {
+		background: black;
+		opacity: 0.3;
+		z-index: 1;
+	}
+}
+
+@media screen and (max-width: 900px) {
+
+	.banner__title {
+		text-align: left;
+		font-size: 1.5rem;
+		margin: 3rem 2rem 3rem 1rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.banner {
+		margin: 1rem 20px;
+		align-items: flex-start;
+	}
+}

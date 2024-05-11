@@ -1,0 +1,31 @@
+
+@import '../../Styles/index.scss';
+
+
+.gallery {
+	border-radius: 25px;
+	background: $grey-light-bg;
+	padding: 50px;
+	gap: 50px;
+	height: auto;
+	margin: 1rem 3rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1230px) {
+	.gallery {
+		gap: 25px;
+		padding: 25px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.gallery {
+		margin: auto;
+		padding: 20px;
+		background: $white;
+	}
+}

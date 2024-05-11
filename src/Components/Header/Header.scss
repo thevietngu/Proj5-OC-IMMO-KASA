@@ -1,0 +1,48 @@
+
+@import '../../Styles/index.scss';
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 3rem;
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		color: black;
+		gap: 4rem;
+		font-family: Montserrat;
+		font-size: 24px;
+		font-style: normal;
+
+		& .active-link {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.header {
+		&__nav {
+			font-size: 1rem;
+			gap: 1rem;
+		}
+
+		&__logo {
+			height: 45px;
+		}
+	}
+}
+
+@media screen and (max-width:550px) {
+	.header {
+		margin: 0 1rem;
+
+		&__nav {
+			margin: 1.5rem 0;
+		}
+	}
+
+}
