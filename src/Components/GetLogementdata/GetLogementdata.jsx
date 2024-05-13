@@ -1,21 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-function GetLogementdata() {
+function GetLogementData() {
   const [logementData, setLogementData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/datas/logdatas.json');
-
-        if (!response.ok) {
-          throw new Error(`Erreur HTTP: ${response.status}`);
-        }
-
-        const data = await response.json();
-        setLogementData(data);
+        const data = await fetch('/datas/logdatas.json');
+        const logements = await data.json();
+        setLogementData(logements || []);
       } catch (error) {
-        console.error('Erreur lors de la récupération des données JSON:', error);
+        console.error('Erreur lors de la récupération des données:', error);
       }
     };
 
@@ -25,4 +20,4 @@ function GetLogementdata() {
   return logementData;
 }
 
-export default GetLogementdata;
+export default GetLogementData;

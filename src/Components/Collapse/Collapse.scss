@@ -50,7 +50,7 @@
 		opacity: 1;
 		transform: translateY(0);
 		transition: all 0.2s ease-in-out;
-		// transition-delay: 0.1s;
+		color: black;
 	}
 
 	&.active>.collapse__title img {
