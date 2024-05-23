@@ -4,6 +4,8 @@ import GetLogementData from "../../Components/GetLogementdata/GetLogementdata";
 import GetSingleLogement from "../../Components/Getsinglelogementdata/Getsinglelogementdata";
 import Error from "../../Pages/Error/Error";
 import Collapse from "../../Components/Collapse/Collapse";
+import Slideshow from "../../Components/Slideshow/Slideshow";
+import Score from "../../Components/Score/Score"
 import './Logement.scss'
 
 function Logement() {
@@ -15,12 +17,16 @@ function Logement() {
     return <Error />;
   }
 
-  
 const hostName = logementData?.host?.name?.split(' ');
+const pictures = logementData?.pictures;
 
 
   return (
     <div>
+
+    <div className="carrousel-container">
+				<Slideshow pictures={pictures} title={logementData.title} />
+	</div>
       <div className="details">
         <div className="details__infos1">
           <div className="details__infos1__title">{logementData.title}</div>
@@ -47,6 +53,7 @@ const hostName = logementData?.host?.name?.split(' ');
               className="details__infos2__host__picture"
             />
           </div>
+          <Score value={logementData.rating} />
         </div>
       </div>
       <div className="logement-collapse-container">

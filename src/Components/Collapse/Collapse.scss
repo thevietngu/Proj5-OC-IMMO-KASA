@@ -51,6 +51,7 @@
 		transform: translateY(0);
 		transition: all 0.2s ease-in-out;
 		color: black;
+		background-color: $grey-light-bg;
 	}
 
 	&.active>.collapse__title img {
