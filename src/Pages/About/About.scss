@@ -7,6 +7,10 @@
 	margin: 1rem auto;
 	align-items: center;
 	padding: 0; /* Ajouté pour éviter les décalages de padding */
+
+	.collapse-item {
+		width: 100%; /* Assurez que chaque item utilise toute la largeur disponible */
+	}
 }
 
 @media screen and (max-width: 550px) {

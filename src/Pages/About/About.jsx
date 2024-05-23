@@ -13,7 +13,7 @@ function About() {
       <Banner title="À propos de nous" backgroundSrc={AboutBannerBg} />
       <ul className="collapse-container">
         {aboutData.map(({ index, title, content }) => (
-          <li key={`${index}-${title}`} style={{ width: '100%' }}>
+          <li key={`${index}-${title}`} className="collapse-item">
             <Collapse title={title} content={content} />
           </li>
         ))}
