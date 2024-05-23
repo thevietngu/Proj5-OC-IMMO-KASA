@@ -1,11 +1,9 @@
-
 @import '../../Styles/index.scss';
 
 .collapse {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	
 
 	&__title {
 		display: flex;
@@ -18,46 +16,41 @@
 		width: 100%;
 		background: $color-primary;
 		color: $white;
-		z-index: 2;
+		cursor: pointer;
 	}
 
 	&__icon {
-		cursor: pointer;
 		width: 32px;
 		height: 32px;
 		transform: rotate(0deg);
-		transition: all 0.3s ease-in-out;
+		transition: transform 0.3s ease-in-out;
 	}
 
 	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 		width: 100%;
 		visibility: hidden;
 		height: 0;
 		opacity: 0;
 		background: $grey-light-bg;
-		padding: 10px 20px 10px 15px;
+		padding: 0 20px;
 		color: var(--red, $color-primary);
 		transform: translateY(-10px);
-		transition: transform 0.3s ease-in-out, visibility 0s 0.3s, height 0s 0.3s;
+		transition: transform 0.3s ease-in-out, visibility 0s 0.3s, height 0s 0.3s, opacity 0.3s, padding 0.3s;
 	}
 
-	&.active>.collapse__content {
+	&.active > .collapse__content {
 		visibility: visible;
 		height: auto;
 		opacity: 1;
+		padding: 10px 20px;
 		transform: translateY(0);
-		transition: all 0.2s ease-in-out;
 		color: black;
 		background-color: $grey-light-bg;
 	}
-
-	&.active>.collapse__title img {
+	
+	&.active > .collapse__title img {
 		transform: rotate(-180deg);
 	}
-
 }
 
 @media screen and (max-width: 550px) {
