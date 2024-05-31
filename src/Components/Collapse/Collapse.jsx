@@ -33,7 +33,9 @@ function Collapse({ title, content }) {
 					alt='collapse arrow'
 				/>
 			</div>
-			{active && <div className="collapse__content">{content}</div>}
+			<div className="collapse__content">
+				{content}
+			</div>
 		</div>
 	);
 };

@@ -42,7 +42,7 @@ function Slideshow({ pictures }) {
   return (
     <div className="carrousel">
       {pictures.length === 0 || pictures.every((element) => !element) ? (
-        <h2 className="carrousel__no-photo-msg">Pas de photo disponible ..</h2>
+        <h2 className="carrousel__no-photo-msg">Pas de photo disponible ...</h2>
       ) : (
         <div>
           {pictures.length > 1 && (

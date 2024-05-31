@@ -1,6 +1,4 @@
-
-@import '../../Styles/index.scss';
-
+@import '../../Styles/index';
 
 .gallery {
 	border-radius: 25px;
@@ -13,17 +11,13 @@
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
-}
 
-@media screen and (max-width: 1230px) {
-	.gallery {
+	@media screen and (max-width: 1230px) {
 		gap: 25px;
 		padding: 25px;
 	}
-}
 
-@media screen and (max-width: 550px) {
-	.gallery {
+	@media screen and (max-width: 550px) {
 		margin: auto;
 		padding: 20px;
 		background: $white;
